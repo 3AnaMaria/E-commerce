@@ -3,3 +3,45 @@
     padding: 0;
     box-sizing: border-box;
 }
+header .header-top {
+    padding: 10px 5%;
+    background-color: rgb(12,164,134);
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 calc(12px + (160 - 12) * ((100vw - 320px) / (1920 - 320)));
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+header ul{
+    list-style-type: none;
+    display: flex;
+    position: absolute;
+}
+header li{
+    display: flex;
+    align-items: center;
+}
+header li img {
+    position: relative;
+    bottom: 50px;
+}
+.header-top-message a{
+    color: white;
+    font-size: 18px;
+}
+header .header-nav{
+    display: flex;
+    padding: 10px 5%;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header-categories{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5%;
+}
