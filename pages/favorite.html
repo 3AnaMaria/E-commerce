@@ -1,12 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorite</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/favoritos.css" />
+    <link rel="icon" href="./images/icon.png" type="image/x-icon" />
+    <title>e-commerce</title>
+  </head>
+  <body>
+    <header class="header">
+      <section class="header-1">
+          <div class="message">
+              <span>Something you love is now on sale!</span>
+              <a href="/index.html"> Buy Now!</a>
+          </div>
+          <div class="logo-1">
+              <img src="/images/united-states.png" alt="bandera">
+          </div>
+          <div class="dropdowns">
+              <div class="language-dropdown">
+                  <button class="dropdown-button">Idioma</button>
+                  <ul class="dropdown-content">
+                      <li>Español</li>
+                      <li>Inglés</li>
+                      <li>Francés</li>
+                  </ul>
+              </div>
+              <div class="currency-dropdown">
+                  <button class="dropdown-button">Moneda</button>
+                  <ul class="dropdown-content">
+                      <li>Dólar</li>
+                      <li>Euro</li>
+                      <li>Libra</li>
+                  </ul>
+              </div>
+          </div>
+      </section>
+      <section class="header-2">
+          <div class="logo">
+              <a href="/index.html"><img src="/images/logo.png" alt="Logo de empresa"></a>
+          </div>
+          <div class="location">
+              <img src="/images/map-pin.svg" alt="Icono de ubicación">
+              <span>Your location</span>
+          </div>
+          <div class="search">
+              <input type="text" placeholder="Buscar...">
+              <button><img src="/images/search.svg" alt="Icono de búsqueda"></button>
+          </div>
+          <div class="phone">
+              <img src="/images/phone-call.svg" alt="Icono de teléfono">
+          </div>
+          <div class="favorites">
+              <img src="/images/heart.svg" alt="Icono de favoritos">
+          </div>
+          <div class="cart">
+              <img src="/images/shopping-cart.svg" alt="Icono de carrito de compras">
+          </div>
+          <div class="user">
+              <img src="/images/user.svg" alt="Icono de usuario">
+          </div>
+      </section>
+      <section class="header-3">
+        <nav class="navbar">
+          <ul class="nav-list" id="categoryList"></ul>
+        </nav>
+      </section>
+
+  </header>
+
+    <main>
+      <div class="mainDiv">
+          <div class="main-interactivo">
+          <figure id="menuCategorias">
+          <img src="https://ecdn.teacherspayteachers.com/thumbitem/Rasgos-o-Caracteristicas-del-Personaje-2181949-1657520585/original-2181949-1.jpg" alt="">
+
+          </figure>
+          <figure id="containerCards">
+   
+          </figure>
+        </div>
+      </div>
+      <div class="main-auxiliar">
+        <img src="./images/settings.svg" alt="settings">
+        <img src="./images/chevron-up.svg" alt="chevron-up">
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./scripts/index.js" type="module"></script>
+
+  </body>
 </html>
