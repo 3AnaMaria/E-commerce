@@ -55,7 +55,7 @@
           <img src="../images/phone-call.svg" alt="Icono de teléfono">
         </div>
         <div class="favorites">
-          <a href="../pages/favorite.html"> <img src="../images/heart.svg" alt="Icono de favoritos"> </a>
+          <a href="../pages/favoritos.html"> <img src="../images/heart.svg" alt="Icono de favoritos"> </a>
         </div>
         <div class="cart">
           <a href="../pages/carrito.html"> <img src="../images/shopping-cart.svg" alt="Icono de carrito de compras"> </a>
@@ -100,24 +100,24 @@
     <section class="main-forms">
       <div class="main-forms-inicial">
         <h2>Total Carrito</h2>
-        <span>Aplicar cupom</span>
-        <div class="cupon">
+        <samp>Aplicar cupón</samp>
+        <div class="cupon" class="form__label">
           <input type="text" placeholder="Ingrese su código aquí...">
-          <button><img src="../images/search.svg" alt="Icono de búsqueda"></button>
+          <button>Aplicar</button>
         </div>
-        <div>
+        <div class="form__list">
           <span>Subtotal</span>
           <div><samp>0.00</samp></div>
         </div>
-        <div>
+        <div class="form__list">
           <span>Descuento del Cupon</span>
           <div><samp>0.00</samp></div>
         </div>
-        <div>
+        <div class="form__list">
           <span>Envío</span>
           <div><samp>0.00</samp></div>
         </div>
-        <div>
+        <div class="form__list">
           <span>Total (COP)</span>
           <div><samp>0.00</samp></div>
         </div>
@@ -132,11 +132,11 @@
           <input type="text" id="name" class="form__input" placeholder="Nombre">
           <input type="text" id="name" class="form__input" placeholder="Dirección">
           <input type="text" id="name" class="form__input" placeholder="Teléfono">
-        <div>
-          <button class="cancelar__btn">
+        <div class="form__btnDi">
+          <button class="form__btn">
             Cancelar
           </button>
-          <button class="comprar__btn">
+          <button class="form__btn" id="comprar__btnsend">
             Comprar
           </button>
         </div>  

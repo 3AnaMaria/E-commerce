@@ -1,6 +1,30 @@
+// Varibales para obtener los datos
+
 const containerFavoritos = document.getElementById("favoritosContainer");
 
 let favoritos = []; 
+let carrito = [];
+
+// Función para agregar un producto al carrito desde favoritos
+const agregarAlCarrito = (producto) => {
+
+  // Verificar si el producto ya está en el carrito
+  const productoExistente = carrito.find((item) => item.id === producto.id);
+
+  if (productoExistente) {
+    console.log("El producto ya está en el carrito:", producto);
+
+    // Salir de la función si el producto ya está en el carrito
+    return; 
+  }
+
+
+  // Agregar al array vacío y guardar como formato json
+  carrito.push(producto);
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+ 
+  };
+
 
 // función para agregar los porductos en la página de favoritos 
 
@@ -19,26 +43,31 @@ const mostrarFavoritos = () => {
         </div>
         <div class="card__icons">
           <button class="favorite-button">
-            <img src="/images/heart.svg" alt="Favoritos" id="heart">
+            <img src="../images/heart.svg" alt="Favoritos" id="heart">
           </button>
           <button class="car-button">
-          <img src="/images/shopping-cart.svg" alt="Carrito de compras" id="car">
+          <img src="../images/shopping-cart.svg" alt="Carrito de compras" id="car">
         </button>
         </div>`;
+        
+        // Botón para eliminar producto
         
         const heartTrash = fav.querySelector(".favorite-button");
         heartTrash.addEventListener("click", () => {
           eliminarFavorito(producto);
           console.log("Producto eliminado de favorito:", producto);
-          mostrarFavoritos(); // Actualizar la visualización después de eliminar el producto
+
+          // Actualizar la vista
+          mostrarFavoritos(); 
         });
 
-        // const carButton = card.querySelector(".car-button");
-        // carButton.addEventListener("click", () => {
-        //   agregarAlCarrito(element);
-        //   console.log("Producto agregado al carrito:", element);
-        // });
-    
+        const carButton = fav.querySelector(".car-button");
+        carButton.addEventListener("click", () => {
+          agregarAlCarrito(producto);
+          console.log("Producto agregado al carrito:", producto);
+        });
+
+    // Agregar a contenedor padre 
         containerFavoritos.appendChild(fav);
     });
 
@@ -50,9 +79,8 @@ const eliminarFavorito = (producto) => {
     localStorage.setItem('favoritos', JSON.stringify(favoritos))
 };
 
-// obtener favoritos del local storage
+// Obtener favoritos del local storage
 favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];  
 
-// llamar función 
-
+// Mostrar los productos en la página de favoritos
 mostrarFavoritos(); 
