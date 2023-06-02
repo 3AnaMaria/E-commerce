@@ -1,3 +1,6 @@
+
+// Datos de todos los productos
+
 export const productos = [
   {
     id: 1,

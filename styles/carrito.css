@@ -100,7 +100,6 @@ a {
 
 .search {
   display: flex;
-
 }
 
 .search input {
@@ -191,13 +190,7 @@ main{
 .main-imagenes img {
   width: 100%;
 }
-.main-forms{
-  width: 100%;
-  /* background-color: blue; */
-  padding: 25px;
-  margin-left: 50px;
-  margin-right: 50px;
-}
+
 .main-forms-inicial{
   /* background-color: white;
   width: 100%;
@@ -208,6 +201,12 @@ main{
   justify-content: flex-start; 
   gap: 0.5rem;
   color: white; */
+  border: 1px solid rgb(155, 155, 155);
+  outline: #2d2d2d;
+  background-color: #eeeeee;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 10px;
 }
 
 .hidden {
@@ -226,6 +225,57 @@ main{
 .main-interactivo {
   margin-top: 10px;
   display: flex;
+}
+.form__list{
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid rgb(155, 155, 155);
+  outline: #2d2d2d;
+  background-color: #eeeeee;
+  border-radius: 5px; */
+  margin: 5px 0; 
+}
+.main-forms-inicial button{
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.comprar__btn{
+  background-color: rgb(234, 108, 108);
+}
+.formNewProduct {
+  padding: 2rem;
+  max-width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1rem;
+  border: 1px solid var(--color-gray);
+}
+.form__input {
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--color-gray);
+  outline: none;
+  border-radius: 5px;
+}
+.form__btn {
+  background-color: var(--color-sucess);
+  align-self: center;
+  width: 150px;
+  padding: 0.5rem 1rem;
+  color: rgb(125, 125, 125);
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.form__btnDi{
+  display: flex;
+  justify-content: flex-end;
+}
+#comprar__btnsend{
+  background-color: rgb(234, 108, 108);
 }
 
 .menuCategorias li,
@@ -355,7 +405,34 @@ h4 {
 .favorite-button:hover {
   background-color: rgb(236, 231, 214);
 }
+.cupon {
+  display: flex;
+  position: relative;
 
+}
+.form__label {
+  position: absolute;
+  top: -10px;
+  background-color: white;
+  left: 10px;
+  padding: 0 10px;
+}
+.cupon input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 1000px;
+
+}
+
+.cupon button {
+  padding: 5px 10px;
+  background-color: rgb(167, 103, 55);
+  border: 1px solid rgb(167, 103, 55);
+  border-radius: 0 5px 5px 0;
+  margin-left: 0px;
+  width: auto;
+}
 
 .footer {
   display: flex;

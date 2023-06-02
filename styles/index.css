@@ -293,6 +293,7 @@ h4 {
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+  gap: 5px;
  }
 
 .card__icons img {
@@ -314,7 +315,7 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-  
+ 
   }
   
   .car-button:hover {
